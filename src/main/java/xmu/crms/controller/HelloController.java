@@ -15,4 +15,11 @@ public class HelloController {
         model.addAttribute("message", "hello");
         return "hello";
     }
+
+    @RequestMapping("/frame")
+    public String frame(Model model)
+    {
+        model.addAttribute("message", "hello");
+        return "frame";
+    }
 }
