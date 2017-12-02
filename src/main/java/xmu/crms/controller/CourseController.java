@@ -1,23 +1,25 @@
 package xmu.crms.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+import xmu.crms.vo.ClassVO;
+import xmu.crms.vo.CourseVO;
+import xmu.crms.vo.SeminarVO;
 
 /**
  * @author LuLongfei
+ * @date 2017-12-2
  */
-@Controller
-@RequestMapping("/course")
+@RestController
+@RequestMapping(value = "/course")
 public class CourseController {
 
     @RequestMapping(method = RequestMethod.GET)
-    public String selectCourses() {
-
-        this.selectCoursesForStudent();
-        this.selectCoursesForTeacher();
-        return "";
+    public Object selectCourses() {
+        return new CourseVO[]{
+                new CourseVO(1L, "OOAD", 3, 60, "2017-09-01", "2018-01-01"),
+                new CourseVO(2L, "J2EE", 1, 60, "2017-09-01", "2018-01-01")
+        };
     }
 
     private String selectCoursesForTeacher() {
@@ -31,51 +33,65 @@ public class CourseController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public String createCourse() {
-
-        return "";
+    @ResponseStatus(value = HttpStatus.CREATED)
+    public Object createCourse() {
+        return new Object() {
+            public Long id = 5L;
+        };
     }
 
-    @RequestMapping(name = "/{courseId}", method = RequestMethod.GET)
-    public String selectCourse(@PathVariable("courseId") int courseId) {
-
-        return "";
+    @RequestMapping(value = "/{courseId}", method = RequestMethod.GET)
+    public Object selectCourse(@PathVariable("courseId") int courseId) {
+        return new CourseVO(new Long(courseId), "OOAD", 3, 60, "2017-09-01", "2018-01-01");
     }
 
-    @RequestMapping(name = "/{courseId}", method = RequestMethod.PUT)
-    public String updateCourse(@PathVariable("courseId") int courseId) {
-
-        return "";
+    @RequestMapping(value = "/{courseId}", method = RequestMethod.PUT)
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
+    public void updateCourse(@PathVariable("courseId") int courseId) {
+        return;
     }
 
-    @RequestMapping(name = "/{courseId}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/{courseId}", method = RequestMethod.DELETE)
+    @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public String deleteCourse(@PathVariable("courseId") int courseId) {
-
-        return "";
+        return null;
     }
 
-    @RequestMapping(name = "/{courseId}/class", method = RequestMethod.GET)
-    public String selectClassesByCourse(@PathVariable("courseId") int courseId) {
+    @RequestMapping(value = "/{courseId}/class", method = RequestMethod.GET)
+    public Object selectClassesByCourse(@PathVariable("courseId") int courseId) {
 
-        return "";
+        return new ClassVO[]{
+                new ClassVO(45L, "周三1-2节"),
+                new ClassVO(48L, "周三3-4节")
+        };
     }
 
-    @RequestMapping(name = "/{courseId}/class", method = RequestMethod.POST)
-    public String createClassForCourse(@PathVariable("courseId") int courseId) {
+    @RequestMapping(value = "/{courseId}/class", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.CREATED)
+    public Object createClassForCourse(@PathVariable("courseId") int courseId) {
 
-        return "";
+        return new Object() {
+            public Long id = 5L;
+        };
     }
 
-    @RequestMapping(name = "/{courseId}/seminar", method = RequestMethod.GET)
-    public String selectSeminarsByCourse(@PathVariable("courseId") int courseId) {
+    @RequestMapping(value = "/{courseId}/seminar", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    public Object selectSeminarsByCourse(@PathVariable("courseId") int courseId) {
 
-        return "";
+        return new SeminarVO[]{
+                new SeminarVO(29L, "界面原型设计", "界面原型设计", "fixed", "2017-09-25", "2017-10-09"),
+                new SeminarVO(32L, "概要设计", "模型层与数据库设计", "fixed", "2017-10-10", "2017-10-24")
+        };
     }
 
-    @RequestMapping(name = "/{courseId}/class", method = RequestMethod.POST)
-    public String createSeminarForCourse(@PathVariable("courseId") int courseId) {
+    @RequestMapping(value = "/{courseId}/seminar", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.CREATED)
+    public Object createSeminarForCourse(@PathVariable("courseId") int courseId) {
 
-        return "";
+        return new Object() {
+            public Long id = 2L;
+        };
     }
 
 }
