@@ -2,28 +2,45 @@ package xmu.crms.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 /**
  * @author LuLongfei
  */
-@RestController
-@RequestMapping("/das")
+@Controller
 public class HelloController {
 
-    @RequestMapping(value = "/{os}/hello",method = RequestMethod.GET)
-    public String hello(@PathVariable("os") int os, Model model) {
+    @RequestMapping("/hello")
+    public String hello(Model model) {
         model.addAttribute("message", "hello");
         return "hello";
     }
 
-    @RequestMapping(value = "/{os}/frame", method = RequestMethod.GET)
-    public String frame(@PathVariable("os") int os, Model model)
+    @RequestMapping("/home")
+    public String frame(Model model)
     {
-        model.addAttribute("message", "hello");
-        return "frame";
+        model.addAttribute("data", new String[] {"周三1-2节", "周三000-2节","周三1-20节"});
+            // public String[] seminarNames = new String[] {"周三1-2节", "周三000-2节","周三1-20节"}
+        return "/teacher/course/homePage";
+    }
+
+    @RequestMapping("/home/grade")
+    public String grade(Model model)
+    {
+        model.addAttribute("data", new String[] {"周三1-2节", "周三000-2节","周三1-20节"});
+        // public String[] seminarNames = new String[] {"周三1-2节", "周三000-2节","周三1-20节"}
+        return "/teacher/course/grade";
+    }
+
+    @ResponseBody
+    @RequestMapping("/homeAjax")
+    public Object ajax(Model model) {
+        return new Object() {
+            public String[] classNames = new String[]{"周三1-2节", "周三000-2节", "周三1-20节"};
+            public String[] seminarNames = new String[]{"周三1-2节", "周三000-2节", "周三1-20节"};
+        };
     }
 }
