@@ -35,6 +35,14 @@ public class HelloController {
         return "/teacher/course/grade";
     }
 
+    @RequestMapping("/home/classInfo")
+    public String classInfo(Model model)
+    {
+        model.addAttribute("data", new String[] {"周三1-2节", "周三000-2节","周三1-20节"});
+        // public String[] seminarNames = new String[] {"周三1-2节", "周三000-2节","周三1-20节"}
+        return "/teacher/course/classInfo";
+    }
+
     @ResponseBody
     @RequestMapping("/homeAjax")
     public Object ajax(Model model) {

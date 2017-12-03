@@ -48,7 +48,6 @@ body
     font-weight: bold;
     text-align: right;
     padding-top: 2%;
-    padding-bottom: 2%;
     margin-left: 9%;
     float: left;
     color: #FFFFFF;
@@ -129,6 +128,9 @@ body
     padding-top: 4%;
     float: right;
 }
+.addImg{
+    padding-top: 15%;
+}
 .returnButton{
     width: 10%;
     background-color: #D4EEF2;
@@ -139,7 +141,4 @@ body
     margin-bottom: 1%;
     margin-left: 85%;
     z-index: 100;
-}
-.addImg{
-    padding-top: 15%;
 }

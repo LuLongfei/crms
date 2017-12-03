@@ -7,7 +7,7 @@
     <meta name="viewport"
           content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title></title>
-    <link rel="stylesheet" href="/css/boorstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/frame.css">
 </head>
 <body>
