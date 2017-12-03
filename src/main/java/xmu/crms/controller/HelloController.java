@@ -59,6 +59,31 @@ public class HelloController {
         return "/teacher/course/createTopic";
     }
 
+    @RequestMapping("/home/createSeminar")
+    public String createSeminar(Model model)
+    {
+        model.addAttribute("data", new String[] {"周三1-2节", "周三000-2节","周三1-20节"});
+        // public String[] seminarNames = new String[] {"周三1-2节", "周三000-2节","周三1-20节"}
+        return "/teacher/course/createSeminar";
+    }
+
+    @RequestMapping("/home/seminarInfo")
+    public String seminarInfo(Model model)
+    {
+        model.addAttribute("data", new String[] {"周三1-2节", "周三000-2节","周三1-20节"});
+        // public String[] seminarNames = new String[] {"周三1-2节", "周三000-2节","周三1-20节"}
+        return "/teacher/course/seminarInfo";
+    }
+
+    @RequestMapping("/home/topicInfo")
+    public String topicInfo(Model model)
+    {
+        model.addAttribute("data", new String[] {"周三1-2节", "周三000-2节","周三1-20节"});
+        // public String[] seminarNames = new String[] {"周三1-2节", "周三000-2节","周三1-20节"}
+        return "/teacher/course/topicInfo";
+    }
+
+
 
     @ResponseBody
     @RequestMapping("/homeAjax")

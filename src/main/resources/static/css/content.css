@@ -18,7 +18,6 @@
     height: 15%;
     margin: 0 auto;
 }
-
 .itemName {
     width: 16%;
     height: 100%;
@@ -27,7 +26,6 @@
     font-size: 18px;
     font-weight: normal;
 }
-
 .smallItemName {
     height: 100%;
     display: inline-block;
@@ -117,7 +115,7 @@
 
 .leftButton {
     width: 15%;
-    height: 50%;
+    height: 60%;
     margin-top: 5%;
     margin-left: 10%;
     font-family: YouYuan;
@@ -131,7 +129,7 @@
 
 .middleButton {
     width: 15%;
-    height: 50%;
+    height: 60%;
     margin-top: 5%;
     margin-left: 10%;
     font-family: YouYuan;
@@ -145,7 +143,7 @@
 
 .rightButton {
     width: 15%;
-    height: 50%;
+    height: 60%;
     margin-top: 5%;
     margin-right: 23%;
     font-family: YouYuan;
@@ -159,14 +157,13 @@
 
 .textStyle {
     width: 80%;
-    height: 100%;
-    margin-bottom: 1%;
+    height: 80%;
     border: 1px solid black;
 }
 
 .timeStyle {
     width: 25%;
-    height: 70%;
+    height: 50%;
     border: 1px solid black;
 }
 
