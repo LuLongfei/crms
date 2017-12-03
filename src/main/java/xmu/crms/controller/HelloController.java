@@ -43,6 +43,23 @@ public class HelloController {
         return "/teacher/course/classInfo";
     }
 
+    @RequestMapping("/home/createClass")
+    public String createClass(Model model)
+    {
+        model.addAttribute("data", new String[] {"周三1-2节", "周三000-2节","周三1-20节"});
+        // public String[] seminarNames = new String[] {"周三1-2节", "周三000-2节","周三1-20节"}
+        return "/teacher/course/createClass";
+    }
+
+    @RequestMapping("/home/createTopic")
+    public String createTopic(Model model)
+    {
+        model.addAttribute("data", new String[] {"周三1-2节", "周三000-2节","周三1-20节"});
+        // public String[] seminarNames = new String[] {"周三1-2节", "周三000-2节","周三1-20节"}
+        return "/teacher/course/createTopic";
+    }
+
+
     @ResponseBody
     @RequestMapping("/homeAjax")
     public Object ajax(Model model) {

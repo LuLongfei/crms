@@ -1,5 +1,6 @@
 <#import "*/frame.ftl" as frame/>
 <@frame.page title="教师评分">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/content.css">
 <div class="content">
     <div class="contentBlock">
