@@ -1,9 +1,16 @@
 package xmu.crms.vo;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+import java.util.List;
+
 /**
  * @author LuLongfei
  * @date 2017-12-2
  */
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class SeminarVO {
 
     private Long id;
@@ -12,6 +19,9 @@ public class SeminarVO {
     private String groupingMethod;
     private String startTime;
     private String endTime;
+    private Integer grade;
+    private List<ClassVO> classes;
+
 
     public SeminarVO(Long id, String name, String description, String groupingMethod, String startTime, String endTime) {
         this.id = id;
@@ -31,6 +41,8 @@ public class SeminarVO {
                 ", groupingMethod='" + groupingMethod + '\'' +
                 ", startTime='" + startTime + '\'' +
                 ", endTime='" + endTime + '\'' +
+                ", grade=" + grade +
+                ", classes=" + classes +
                 '}';
     }
 
@@ -80,5 +92,21 @@ public class SeminarVO {
 
     public void setEndTime(String endTime) {
         this.endTime = endTime;
+    }
+
+    public List<ClassVO> getClasses() {
+        return classes;
+    }
+
+    public void setClasses(List<ClassVO> classes) {
+        this.classes = classes;
+    }
+
+    public Integer getGrade() {
+        return grade;
+    }
+
+    public void setGrade(Integer grade) {
+        this.grade = grade;
     }
 }
