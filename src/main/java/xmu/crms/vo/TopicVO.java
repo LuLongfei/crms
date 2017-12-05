@@ -1,5 +1,8 @@
 package xmu.crms.vo;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class TopicVO {
 
     private Long id;
@@ -14,6 +17,11 @@ public class TopicVO {
         this.description = description;
         this.groupLimit = groupLimit;
         this.groupLeft = groupLeft;
+    }
+
+    public TopicVO(Long id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
     @Override

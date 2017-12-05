@@ -1,4 +1,4 @@
-package xmu.crms.controller;
+package xmu.crms.view;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +13,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-
+/**
+ * 课程相关 API 测试
+ * url-pattern: prefix="/course"
+ *
+ * @author LuLongfei
+ * @date 2017-12-3
+ */
 @RunWith(SpringRunner.class)
 @WebMvcTest
 public class CourseControllerTest {

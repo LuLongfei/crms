@@ -34,6 +34,17 @@ public class UserDO {
     private Gender gender;
     private SchoolDO school;
 
+    public UserDO(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public UserDO(Long id, String number, String name) {
+        this.id = id;
+        this.number = number;
+        this.name = name;
+    }
+
     public Long getId() {
         return id;
     }
