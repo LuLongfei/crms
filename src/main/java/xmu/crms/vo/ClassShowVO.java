@@ -8,12 +8,14 @@ public class ClassShowVO {
 
     private Long id;
     private String name;
+    private String teacher;
     private String site;
     private ClassShowCourseVO course;
 
-    public ClassShowVO(Long id, String name, String site, ClassShowCourseVO course) {
+    public ClassShowVO(Long id, String name, String teacher, String site, ClassShowCourseVO course) {
         this.id = id;
         this.name = name;
+        this.teacher = teacher;
         this.site = site;
         this.course = course;
     }
@@ -23,6 +25,7 @@ public class ClassShowVO {
         return "ClassShowVO{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", teacher'" + teacher + '\''+
                 ", site='" + site + '\'' +
                 ", course=" + course +
                 '}';
@@ -43,6 +46,10 @@ public class ClassShowVO {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void setTeacher(String teacher) { this.teacher = teacher; }
+
+    public String getTeacher() { return teacher; }
 
     public String getSite() {
         return site;

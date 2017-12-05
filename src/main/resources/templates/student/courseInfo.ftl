@@ -1,27 +1,32 @@
 <#import "*/infoFrame.ftl" as frame/>
 <@frame.page title="学生成绩">
 <link rel="stylesheet" href="/css/content.css">
+<link rel="stylesheet" href="/css/student/content.css">
 <div class="content">
     <div class="contentBlock">
         <div class="title">课程信息</div>
-        <div class="line"/>
-        <div class="main_box_right_content">
-            <h3 class="classtitle"><span id="course">J2EE</span>
-                <button>退选课程</button>
-            </h3>
-            <div class="divideline"></div>
-            <div class="classinfo">
-                <table class="table">
-                    <tr>
-                        <td class="tabletext">班级：<span id="name">周三一二节</span></td>
-                        <td class="tabletext" id="site">课程地点：XXX</td>
-                    </tr>
-                    <tr>
-                        <td class="tabletext" id="teacher">教师：邱明</td>
-                        <td class="tabletext"></td>
-                    </tr>
-                </table>
-            </div>
+        <div class="line"></div>
+        <div>
+            <#list data as info>
+                <div class="main_box_right_content">
+                    <h3 class="classtitle"><span id="course">${info.course.name}</span>
+                        <button class="main_box_right_content_button">退选课程</button>
+                    </h3>
+                    <div class="divideline"></div>
+                    <div class="classinfo" style="margin: 0 auto;text-align:justify">
+                        <div class="item">
+                            <label class="itemName">班级:</label>
+                            <label class="itemName">${info.name}</label>
+                            <label class="itemName" style="margin-left: 30%;">课程地点：</label>
+                            <label class="itemName">${info.site}</label>
+                        </div>
+                        <div class="item">
+                            <label class="itemName">教师:</label>
+                            <label class="itemName">${info.teacher}</label>
+                        </div>
+                    </div>
+                </div>
+            </#list>
         </div>
     </div>
 </div>

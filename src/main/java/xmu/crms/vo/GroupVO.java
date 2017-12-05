@@ -16,6 +16,9 @@ public class GroupVO {
     private TopicVO topic;
     private String report;
 
+    public GroupVO() {
+    }
+
     @Override
     public String toString() {
         return "GroupVO{" +
