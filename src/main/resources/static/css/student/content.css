@@ -1,0 +1,85 @@
+.lightline {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 1%;
+    border: 0.5px solid #41C7DB;
+}
+
+.topicUl {
+
+    line-height: 200%;
+    font-size: 18px;
+    list-style-type: none
+}
+
+.uploadbutton {
+    left: 30%;
+    height: 100%;
+    width: 100%;
+    min-height: 50px;
+    background-color: #D4EEF2;
+    border-color: #269CE9;
+    border: 1px #DADADA solid;
+    border-radius: 20px;
+    font-size: 18px;
+    outline: none;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.viewscorebutton {
+    left: 30%;
+    height: 100%;
+    width: 100%;
+    min-height: 50px;
+    margin-top: 2%;
+    background-color: #D4EEF2;
+    border-color: #269CE9;
+    border: 1px #DADADA solid;
+    border-radius: 20px;
+    font-size: 18px;
+    outline: none;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.modifyButton {
+    width: 10%;
+    background-color: #D4EEF2;
+    border: 1px solid #D4EEF2;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    margin-left: 38%;
+}
+.main_box_right_content{
+    background-color: rgba(11, 172, 225, 0.2);
+    border-radius: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 15%;
+    margin-top:2px;
+
+}
+.classtitle{
+    height:20%;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    margin:0px;
+}
+.main_box_right_content button{
+    background-color:rgba(130,167,253,1.00);
+    padding: 3px 3px;
+    font-size: 10px;
+    float: right;
+    border:none ;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.divideline{
+
+    width: 96%;
+    margin: 0 auto;
+    border: 1.5px solid white;}

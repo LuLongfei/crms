@@ -16,6 +16,7 @@
 .item {
     width: 80%;
     height: 15%;
+    min-height: 40px;
     margin: 0 auto;
 }
 .itemName {
@@ -209,5 +210,16 @@
 th {
     text-align: center;
 }
+.imgarea {
+    float: left;
+    text-align: right;
+    margin-top: 2%;
+    width: 25%;
+}
 
+.info {
+    float: left;
+    width: 65%;
+    margin-top: 2%;
+}
 
