@@ -9,6 +9,8 @@
     <title></title>
     <link rel="stylesheet" href="/css/frame.css">
     <link rel="stylesheet" href="/css/infoFrame.css">
+    <script src="/js/jquery-1.7.2.min.js"></script>
+    <script src="/js/jquery.easing.min.js"></script>
 </head>
 <body>
 <div class="top">

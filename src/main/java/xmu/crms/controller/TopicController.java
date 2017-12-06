@@ -14,7 +14,7 @@ public class TopicController {
 
     @RequestMapping(value = "/{topicId}", method = RequestMethod.GET)
     public Object selectTopic(@PathVariable("topicId") int topicId) {
-        return new TopicVO(257L, "领域模型与模块划分", "Domain model与模块划分", 5, 2);
+        return new TopicVO(257L, "领域模型与模块划分", "Domain model与模块划分", 5, 2,"A",5);
     }
 
     @RequestMapping(value = "/{topicId}", method = RequestMethod.PUT)

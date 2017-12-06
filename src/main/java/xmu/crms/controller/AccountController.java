@@ -15,7 +15,7 @@ import xmu.crms.entity.UserDO;
 @RestController
 public class AccountController {
 
-//    @Autowired
+//    @Autowireds
     public Database database = new Database();
 
     @RequestMapping(value = "/me", method = RequestMethod.GET)
