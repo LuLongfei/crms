@@ -4,7 +4,7 @@
 <div class="content">
     <div class="contentBlock" style="height:60%">
         <div class="title">${seminar.name}</div>
-        <div class="returnButton" >返回上一页</div>
+        <div class="returnButton" id="returnButton">返回上一页</div>
         <div class="line"></div>
         <div class="itemBody">
             <div class="item">
@@ -29,7 +29,7 @@
             </div>
             <#if seminar.endTime == "2017-12-20">
                 <div class="item">
-                    <button class="leftButton">评分</button>
+                    <button class="leftButton" id="grade">评分</button>
                     <button class="middleButton">修改</button>
                     <button class="rightButton">删除讨论课</button>
                     <div class="clear"></div>
@@ -42,16 +42,17 @@
         <div class="line"></div>
         <div class="blockBody">
             <#list topic as topics>
-                <div class="block">
+                <div class="block" onclick="topicInfo('${topics.name}')">
                     <div class="blockFont">${topics.name}</div>
                 </div>
             </#list>
             <#if seminar.endTime == "2017-12-20">
-                <div class="block">
+                <div class="block" id="topicAdd">
                     <img class="addImg" src="/image/add.png" alt="添加">
                 </div>
             </#if>
         </div>
     </div>
 </div>
+<script src="/js/teacher/seminarInfo.js"></script>
 </@frame.page>

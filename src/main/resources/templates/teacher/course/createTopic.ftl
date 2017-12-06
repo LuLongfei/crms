@@ -4,7 +4,7 @@
 <div class="content">
     <div class="contentBlock">
         <div class="title">创建话题</div>
-        <div class="returnButton" >返回上一页</div>
+        <div class="returnButton" id="returnSeminar">返回上一页</div>
         <div class="line"></div>
         <div class="itemBody">
             <div class="item">
@@ -31,4 +31,9 @@
         </div>
     </div>
 </div>
+<script>
+    $("#returnSeminar").click(function(){
+        window.location.href = "/teacher/course/seminarInfo";
+    })
+</script>
 </@frame.page>

@@ -8,7 +8,7 @@
         <div class="line"></div>
         <div>
             <#list data as courses>
-                <div class="main_box_right_content">
+                <div class="main_box_right_content" onclick="javascript:course('${courses.name}')">
                     <h3 class="classtitle"><span id="course">${courses.name}</span>
                         <button class="main_box_right_content_button">删除课程</button>
                         <button class="main_box_right_content_button">修改课程</button>
@@ -34,4 +34,5 @@
     </div>
 </div>
 <div class="clear"></div>
+<script src="/js/teacher/courseInfo.js"></script>
 </@frame.page>

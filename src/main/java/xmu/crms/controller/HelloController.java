@@ -24,10 +24,19 @@ public class HelloController {
         return "hello";
     }
 
-    @RequestMapping("/teacher/course/homePage")
+    @RequestMapping("/teacher/course/homePage/OOAD")
     public String frame(Model model) {
+        String name = "OOAD";
         model.addAttribute("data", new String[]{"周三1-2节", "周三3-4节"});
-        // public String[] seminarNames = new String[] {"周三1-2节", "周三000-2节","周三1-20节"}
+        model.addAttribute("name",name);
+        return "/teacher/course/homePage";
+    }
+
+    @RequestMapping("/teacher/course/homePage")
+    public String frame1(Model model) {
+        String name = "J2EE";
+        model.addAttribute("data", new String[]{"周三1-2节", "周三3-4节"});
+        model.addAttribute("name",name);
         return "/teacher/course/homePage";
     }
 
@@ -84,9 +93,16 @@ public class HelloController {
         return "/teacher/course/seminarInfo";
     }
 
-    @RequestMapping("/teacher/course/topicInfo")
-    public String topicInfo(Model model) {
+    @RequestMapping("/teacher/course/topicInfo/A")
+    public String topicInfoA(Model model) {
         TopicVO topic = new TopicVO((long) 1, "A", "Domain Model", 5, 3);
+        model.addAttribute("topic",topic);
+        return "/teacher/course/topicInfo";
+    }
+
+    @RequestMapping("/teacher/course/topicInfo/B")
+    public String topicInfoB(Model model) {
+        TopicVO topic = new TopicVO((long) 1, "B", "Package", 4, 3);
         model.addAttribute("topic",topic);
         return "/teacher/course/topicInfo";
     }
@@ -195,8 +211,8 @@ public class HelloController {
         CourseVO course = new CourseVO((long)1,"J2EE",3,60,"2017-11-10","2017-11-20");
         CourseVO course1 = new CourseVO((long)2,"OOAD",3,130,"2017-10-01","2017-12-31");
         CourseVO course2 = new CourseVO((long)3,"python",1,50,"2017-09-22","2017-10-30");
-        lists.add(course);
         lists.add(course1);
+        lists.add(course);
         lists.add(course2);
         model.addAttribute("data", lists);
         return "/teacher/courseInfo";

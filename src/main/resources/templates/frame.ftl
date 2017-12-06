@@ -27,7 +27,7 @@
     <div class="navigation">
         <div class="courseName">OOAD</div>
         <div class="line"></div>
-        <div class="courseIntroduction">ooad is xxx</div>
+        <div class="courseIntroduction">xxx is xxx</div>
     </div>
     <#nested >
     <div class="clear"></div>

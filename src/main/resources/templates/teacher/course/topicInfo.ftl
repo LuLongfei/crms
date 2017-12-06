@@ -1,10 +1,11 @@
 <#import "*/frame.ftl" as frame/>
+    <#global url = springMacroRequestContext.getContextPath()>
 <@frame.page title="查看话题">
 <link rel="stylesheet" href="/css/content.css">
 <div class="content">
     <div class="contentBlock">
         <div class="title">查看话题</div>
-        <div class="returnButton" >返回上一页</div>
+        <div class="returnButton">返回上一页</div>
         <div class="line"></div>
         <div class="itemBody">
             <div class="item">
@@ -25,7 +26,12 @@
             </div>
             <div class="item">
                 <label class="itemName">已选小组:</label>
-                <label class="itemName">A1</label>
+                <#if topic.name == "A">
+                    <label class="itemName">A1 A2</label>
+                </#if>
+                <#if topic.name == "B">
+                    <label class="itemName">B1 B2 B3</label>
+                </#if>
             </div>
             <div class="item">
                 <button class="submit">修改</button>
@@ -35,4 +41,10 @@
         </div>
     </div>
 </div>
+<script>
+    function returnButton(name,url) {
+        console.log(url);
+        console.log(name);
+    }
+</script>
 </@frame.page>

@@ -5,7 +5,7 @@
 <div class="content">
     <div class="contentBlock">
         <div class="title">评分</div>
-        <div class="returnButton" >返回上一页</div>
+        <div class="returnButton" id="returnFinish">返回上一页</div>
         <div class="line"></div>
         <div class="itemBody">
             <table class="table table-striped">
@@ -23,7 +23,7 @@
                 </thead>
                 <tbody class="tableContent">
                 <tr>
-                    <td>A</td>
+                    <td>A1</td>
                     <td>Bangalore</td>
                     <td>xxx</td>
                     <td>5</td>
@@ -36,7 +36,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>A</td>
+                    <td>A2</td>
                     <td>Bangalore</td>
                     <td>xxx</td>
                     <td>5</td>
@@ -49,7 +49,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>A</td>
+                    <td>B1</td>
                     <td>Bangalore</td>
                     <td>xxx</td>
                     <td>5</td>
@@ -66,4 +66,9 @@
         </div>
     </div>
 </div>
+<script>
+    $("#returnFinish").click(function(){
+        window.location.href = "/teacher/course/seminarInfo";
+    })
+</script>
 </@frame.page>

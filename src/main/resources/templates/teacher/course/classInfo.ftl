@@ -5,7 +5,7 @@
 <div class="content">
     <div class="contentBlock">
         <div class="title">周三1-2节</div>
-        <div class="returnButton" >返回上一页</div>
+        <div class="returnButton" id="returnButton">返回上一页</div>
         <div class="line"></div>
         <div class="itemBody">
             <div class="item">
@@ -87,4 +87,9 @@
         </div>
     </div>
 </div>
+<script>
+    $("#returnButton").click(function(){
+        window.location.href = "/teacher/course/homePage/OOAD";
+    })
+</script>
 </@frame.page>
