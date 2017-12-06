@@ -8,7 +8,7 @@
         <div class="line"></div>
         <div>
             <#list data as info>
-                <div class="main_box_right_content">
+                <div class="main_box_right_content" onclick="course('${info.course.name}')">
                     <h3 class="classtitle"><span id="course">${info.course.name}</span>
                         <button class="main_box_right_content_button">退选课程</button>
                     </h3>
@@ -31,4 +31,5 @@
     </div>
 </div>
 <div class="clear"></div>
+<script src="/js/student/courseInfo.js"></script>
 </@frame.page>

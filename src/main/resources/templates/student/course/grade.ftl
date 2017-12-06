@@ -5,7 +5,7 @@
 <div class="content">
     <div class="contentBlock">
         <div class="title">学生成绩</div>
-        <div class="returnButton" >返回上一页</div>
+        <div class="returnButton" id="returnButton">返回上一页</div>
         <div class="line"></div>
         <div class="itemBody">
             <table class="table table-striped">
@@ -35,4 +35,9 @@
         </div>
     </div>
 </div>
+<script>
+    $("#returnButton").click(function(){
+        window.location.href = "/student/course/seminarInfo/fixed";
+    })
+</script>
 </@frame.page>

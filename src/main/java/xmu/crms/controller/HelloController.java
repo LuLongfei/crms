@@ -107,9 +107,19 @@ public class HelloController {
         return "/teacher/course/topicInfo";
     }
 
+    @RequestMapping("/student/course/home/OOAD")
+    public String stuhomeOOAD(Model model) {
+        String name = "OOAD";
+        model.addAttribute("data", new String[]{"讨论课1", "讨论课2"});
+        model.addAttribute("name",name);
+        return "/student/course/homePage";
+    }
+
     @RequestMapping("/student/course/home")
     public String stuhome(Model model) {
-        model.addAttribute("data", new String[]{"讨论课1", "讨论课2", "讨论课3", "讨论课4"});
+        String name = "OOAD";
+        model.addAttribute("data", new String[]{"讨论课1", "讨论课2"});
+        model.addAttribute("name",name);
         return "/student/course/homePage";
     }
 
@@ -117,10 +127,8 @@ public class HelloController {
     public String stuSeminarInfo(Model model) {
         SeminarVO seminar = new SeminarVO((long)1,"讨论课1","本节课讨论第一章内容","固定分组","2017-11-10","2017-11-20");
         TopicVO topic = new TopicVO((long) 1, "A", "Domain Model", 5, 3);
-        TopicVO topic1 = new TopicVO((long) 1, "B", "Domain Model", 5, 3);
         List<TopicVO> topics = new ArrayList<>();
         topics.add(topic);
-        topics.add(topic1);
         model.addAttribute("data",seminar);
         model.addAttribute("topic",topics);
         return "/student/course/seminarInfo";
@@ -135,18 +143,48 @@ public class HelloController {
         users.add(leader);
         users.add(leader1);
         SeminarVO seminar = new SeminarVO((long)2,"讨论课2","本节课讨论第二章内容","随机分组","2017-11-12","2017-11-20");
-        TopicVO topic = new TopicVO((long) 1, "A", "Domain Model", 5, 3);
-        TopicVO topic1 = new TopicVO((long) 1, "B", "Domain Model", 5, 3);
-        TopicVO topic2 = new TopicVO((long) 1, "C", "Domain Model", 5, 3);
+        TopicVO topic = new TopicVO((long) 1, "B", "Domain Model", 5, 3);
         GroupVO group = new GroupVO((long)3,leader,users,topic,"report");
         List<TopicVO> topics = new ArrayList<>();
         topics.add(topic);
-        topics.add(topic1);
-        topics.add(topic2);
         model.addAttribute("group",group);
         model.addAttribute("data",seminar);
         model.addAttribute("topic",topics);
         return "/student/course/seminarInfo";
+    }
+
+    @RequestMapping("/student/course/topicInfo/random")
+    public String stuTopic(Model model) {
+        SchoolDO school = new SchoolDO((long)1,"厦门大学","福建省","厦门市");
+        UserDO leader = new UserDO((long)1,"学生","24320152202000","sss","188xxxx8888","xxx@xx","111", UserDO.Gender.MALE,school);
+        UserDO leader1 = new UserDO((long)1,"学生","24320152202000","xxx","188xxxx6666","xxx@xx","111", UserDO.Gender.MALE,school);
+        List<UserDO> users = new ArrayList<>();
+        users.add(leader);
+        users.add(leader1);
+        SeminarVO seminar = new SeminarVO((long)2,"讨论课2","本节课讨论第二章内容","随机分组","2017-11-12","2017-11-20");
+        TopicVO topic = new TopicVO((long) 1, "B", "Domain Model", 5, 3);
+        GroupVO group = new GroupVO((long)3,leader,users,topic,"report");
+        model.addAttribute("group",group);
+        model.addAttribute("seminar",seminar);
+        model.addAttribute("topic",topic);
+        return "/student/course/topicInfo";
+    }
+
+    @RequestMapping("/student/course/topicInfo/fixed")
+    public String stuTopic2(Model model) {
+        SchoolDO school = new SchoolDO((long)1,"厦门大学","福建省","厦门市");
+        UserDO leader = new UserDO((long)1,"学生","24320152202000","sss","188xxxx8888","xxx@xx","111", UserDO.Gender.MALE,school);
+        UserDO leader1 = new UserDO((long)1,"学生","24320152202000","xxx","188xxxx6666","xxx@xx","111", UserDO.Gender.MALE,school);
+        List<UserDO> users = new ArrayList<>();
+        users.add(leader);
+        users.add(leader1);
+        SeminarVO seminar = new SeminarVO((long)2,"讨论课1","本节课讨论第二章内容","固定分组","2017-11-12","2017-11-20");
+        TopicVO topic = new TopicVO((long) 1, "A", "Domain Model", 5, 3);
+        GroupVO group = new GroupVO((long)3,leader,users,topic,"report");
+        model.addAttribute("group",group);
+        model.addAttribute("seminar",seminar);
+        model.addAttribute("topic",topic);
+        return "/student/course/topicInfo";
     }
 
     @RequestMapping("/student/course/grade")
@@ -186,11 +224,9 @@ public class HelloController {
         ClassShowCourseVO  course1 = new ClassShowCourseVO((long)2,"J2EE",2);
         ClassShowVO class1 = new ClassShowVO((long)1,"周三1-2节","邱明","海韵208",course);
         ClassShowVO class2 = new ClassShowVO((long)2,"周三3-4节","邱明","海韵212",course1);
-        ClassShowVO class3 = new ClassShowVO((long)3,"周一5-6节","邱明","海韵202",course);
         List<ClassShowVO> lists = new ArrayList<>();
         lists.add(class1);
         lists.add(class2);
-        lists.add(class3);
         model.addAttribute("data", lists);
         return "/student/courseInfo";
     }

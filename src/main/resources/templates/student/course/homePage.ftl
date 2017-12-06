@@ -4,14 +4,16 @@
 <div class="content">
     <div class="classInfo">
         <div class="title">讨论课</div>
-        <div class="returnButton">返回上一页</div>
+        <div class="returnButton" id="returnButton">返回上一页</div>
         <div class="line"></div>
         <div class="blockBody">
-            <#list data as seminarName>
-                <div class="block">
-                    <div class="blockFont">${seminarName}</div>
-                </div>
-            </#list>
+            <#if name == "OOAD">
+                <#list data as seminarName>
+                    <div class="block" onclick="seminar('${seminarName}')">
+                        <div class="blockFont">${seminarName}</div>
+                    </div>
+                </#list>
+            </#if>
         </div>
     </div>
     <div class="seminarInfo">
@@ -19,9 +21,10 @@
         <div class="line"></div>
         <div class="blockBody">
             <div class="block">
-                <div class="blockFont">固定分组</div>
+                <div class="blockFont" id="group">固定分组</div>
             </div>
         </div>
     </div>
 </div>
+<script src="/js/student/courseHome.js"></script>
 </@frame.page>

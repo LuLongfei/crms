@@ -11,7 +11,7 @@
                 <div class="item">
                     <label class="itemName">用户名: </label>
                     <label class="itemName" id="username">ssss</label>
-                    <label class="itemName" style="margin-left: 20%;">教工号: </label>
+                    <label class="itemName" style="margin-left: 20%;">学号: </label>
                     <label class="itemName" id="number">12344567</label>
                 </div>
                 <div class="item">
@@ -23,8 +23,8 @@
                 <div class="item">
                     <label class="itemName">学校: </label>
                     <label class="itemName" id="school">厦门大学</label>
-                    <label class="itemName" style="margin-left: 20%;">职称: </label>
-                    <label class="itemName" id="title">教授</label>
+                    <label class="itemName" style="margin-left: 20%;">学历: </label>
+                    <label class="itemName" id="title">本科</label>
                 </div>
                 <div class="item">
                     <label class="itemName">E-mail: </label>

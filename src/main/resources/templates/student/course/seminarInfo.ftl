@@ -5,7 +5,7 @@
 <div class="content">
     <div>
         <div class="title">${data.name}</div>
-        <div class="returnButton">返回上一页</div>
+        <div class="returnButton" id="returnButton">返回上一页</div>
         <div class="line"></div>
         <div class="itemBody">
             <div class="item">
@@ -54,7 +54,7 @@
         <div class="line"></div>
         <div class="blockBody">
             <#list topic as topics>
-                <div class="block">
+                <div class="block" onclick="topic('${topics.name}')">
                     <div class="blockFont">${topics.name}</div>
                 </div>
             </#list>
@@ -63,9 +63,10 @@
             <button class="uploadbutton">上传报告</button>
         </div>
         <div class="item">
-            <button class="viewscorebutton">查看分数</button>
+            <button class="viewscorebutton" id="grade">查看分数</button>
             <div class="clear"></div>
         </div>
     </div>
 </div>
+<script src="/js/student/seminarInfo.js"></script>
 </@frame.page>
