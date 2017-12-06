@@ -26,7 +26,7 @@ public class HelloController {
 
     @RequestMapping("/teacher/course/homePage")
     public String frame(Model model) {
-        model.addAttribute("data", new String[]{"周三1-2节", "周三000-2节", "周三1-20节"});
+        model.addAttribute("data", new String[]{"周三1-2节", "周三3-4节"});
         // public String[] seminarNames = new String[] {"周三1-2节", "周三000-2节","周三1-20节"}
         return "/teacher/course/homePage";
     }
@@ -40,7 +40,6 @@ public class HelloController {
 
     @RequestMapping("/teacher/course/classInfo")
     public String classInfo(Model model) {
-        model.addAttribute("data", new String[]{"周三1-2节", "周三000-2节", "周三1-20节"});
         return "/teacher/course/classInfo";
     }
 
@@ -61,7 +60,7 @@ public class HelloController {
 
     @RequestMapping("/teacher/course/seminarInfo")
     public String seminarInfo(Model model) {
-        SeminarVO seminar = new SeminarVO((long)1,"讨论课1","第一章内容","固定分组","2017-11-10","2017-12-20");
+        SeminarVO seminar = new SeminarVO((long)1,"讨论课2","第一章内容","固定分组","2017-11-10","2017-12-20");
         TopicVO topic = new TopicVO((long) 1, "A", "Domain Model", 5, 3);
         TopicVO topic1 = new TopicVO((long) 1, "B", "Package Diagram", 5, 3);
         List<TopicVO> topics = new ArrayList<>();
@@ -74,7 +73,7 @@ public class HelloController {
 
     @RequestMapping("/teacher/course/seminarInfo/finish")
     public String seminarInfoFinish(Model model) {
-        SeminarVO seminar = new SeminarVO((long)1,"讨论课2","第二章内容","固定分组","2017-11-10","2017-11-20");
+        SeminarVO seminar = new SeminarVO((long)1,"讨论课1","第二章内容","固定分组","2017-11-10","2017-11-20");
         TopicVO topic = new TopicVO((long) 1, "A", "Domain Model", 5, 3);
         TopicVO topic1 = new TopicVO((long) 1, "B", "Package Diagram", 5, 3);
         List<TopicVO> topics = new ArrayList<>();

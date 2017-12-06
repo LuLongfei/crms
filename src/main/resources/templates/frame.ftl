@@ -8,6 +8,8 @@
           content="width=device-width,height=device-height,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title></title>
     <link rel="stylesheet" href="/css/frame.css">
+    <script src="/js/jquery-1.7.2.min.js"></script>
+    <script src="/js/jquery.easing.min.js"></script>
 </head>
 <body>
 <div class="top">
