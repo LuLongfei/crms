@@ -1,5 +1,6 @@
 <#import "*/frame.ftl" as frame/>
 <@frame.page title="班级信息">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
 <link rel="stylesheet" href="/css/content.css">
 <div class="content">
     <div class="contentBlock">
@@ -27,17 +28,56 @@
                 <label class="itemName"> 报告分数占比</label>
                 <label class="itemName">40%</label>
             </div>
-            <div class="item" style="margin-left: 25%">
-                <label class="smallItemName">5分占比</label>
-                <input type="text" name="seminarGrade" class="smallInput">
-                <label class="smallItemName">4分占比</label>
-                <input type="text" name="seminarGrade" class="smallInput">
-                <label class="smallItemName">3分占比</label>
-                <input type="text" name="seminarGrade" class="smallInput">
+            <div style="width: 80%;margin: 0 auto;">
+                <table class="table table-striped" style="width: 80%;margin: 0 auto;">
+                    <thead class="tableTitle">
+                    <tr>
+                        <th>分数</th>
+                        <th>班级占比(%)</th>
+                    </tr>
+                    </thead>
+                    <tbody class="tableContent">
+                    <tr>
+                        <td>5</td>
+                        <td>30%</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>60%</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>10%</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="item">
-                <label class="itemName">导入学生名单:</label>
-                <button class="selectFile">下载文件</button>
+                <label class="itemName">学生名单:</label>
+            </div>
+            <div style="width: 80%;margin: 0 auto;">
+                <table class="table table-striped" style="width: 80%;margin: 0 auto;">
+                    <thead class="tableTitle">
+                    <tr>
+                        <th>学号</th>
+                        <th>姓名</th>
+                    </tr>
+                    </thead>
+                    <tbody class="tableContent">
+                    <tr>
+                        <td>24320152202000</td>
+                        <td>sss</td>
+                    </tr>
+                    <tr>
+                        <td>24320152202001</td>
+                        <td>sss</td>
+                    </tr>
+                    <tr>
+                        <td>24320152202002</td>
+                        <td>xxx</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="item">
                 <button class="submit">修改</button>

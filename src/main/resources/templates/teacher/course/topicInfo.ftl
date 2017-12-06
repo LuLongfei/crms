@@ -9,19 +9,19 @@
         <div class="itemBody">
             <div class="item">
                 <label class="itemName">题 目:</label>
-                <label class="itemName">题 目:</label>
+                <label class="itemName">${topic.name}</label>
             </div>
             <div class="item">
                 <label class="itemName">说 明:</label>
-                <label class="itemName">说 明:</label>
+                <label class="itemName">${topic.description}</label>
             </div>
             <div class="item">
                 <label class="itemName">组数限制:</label>
-                <label class="itemName">组数限制:</label>
+                <label class="itemName">${topic.groupLimit}</label>
             </div>
             <div class="item">
                 <label class="itemName">组内人数限制:</label>
-                <label class="itemName">组内人数限制:</label>
+                <label class="itemName">${topic.groupLeft}</label>
             </div>
             <div class="item">
                 <label class="itemName">已选小组:</label>
