@@ -68,7 +68,7 @@
         <div class="line"></div>
         <div class="blockBody">
             <#list topic as topics>
-                <div class="block" onclick="topicInfo('${topics.name}')">
+                <div class="block" id="${topics.name}" onclick="topicInfo('${topics.name}','${seminar.endTime}')">
                     <div class="blockFont">${topics.name}</div>
                 </div>
             </#list>

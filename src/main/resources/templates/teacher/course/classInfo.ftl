@@ -4,13 +4,13 @@
 <link rel="stylesheet" href="/css/content.css">
 <div class="content">
     <div class="contentBlock">
-        <div class="title">周三1-2节</div>
+        <div class="title">${data}</div>
         <div class="returnButton" id="returnButton">返回上一页</div>
         <div class="line"></div>
         <div class="itemBody">
             <div class="item">
                 <label class="itemName">班级名称:</label>
-                <label class="itemName">周三1-2节</label>
+                <label class="itemName">${data}</label>
             </div>
             <div class="item">
                 <label class="itemName">上课地点:</label>
@@ -81,7 +81,7 @@
             </div>
             <div class="item">
                 <button class="submit">修改</button>
-                <button class="reset">删除班级</button>
+                <button class="reset" onclick="deleteClass('${data}')">删除班级</button>
                 <div class="clear"></div>
             </div>
         </div>
@@ -90,6 +90,16 @@
 <script>
     $("#returnButton").click(function(){
         window.location.href = "/teacher/course/homePage/OOAD";
-    })
+    });
+</script>
+<script>
+    function deleteClass(e) {
+        console.log(e);
+        var r = confirm("确认删除班级？");
+        if( r == true){
+            console.log(e);
+            location.href="/teacher/course/homePage/OOAD?class="+e;//发送txt里面的内容        })    })
+        }
+    };
 </script>
 </@frame.page>

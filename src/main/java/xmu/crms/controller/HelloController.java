@@ -26,8 +26,9 @@ public class HelloController {
 
     @RequestMapping("/teacher/course/homePage/OOAD")
     public String frame(Model model) {
+        String className[] = {"周三1-2节"};
         String name = "OOAD";
-        model.addAttribute("data", new String[]{"周三1-2节", "周三3-4节"});
+        model.addAttribute("data", className);
         model.addAttribute("name",name);
         return "/teacher/course/homePage";
     }
@@ -49,6 +50,8 @@ public class HelloController {
 
     @RequestMapping("/teacher/course/classInfo")
     public String classInfo(Model model) {
+        String name = "周三1-2节";
+        model.addAttribute("data",name);
         return "/teacher/course/classInfo";
     }
 

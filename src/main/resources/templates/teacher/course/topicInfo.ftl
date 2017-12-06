@@ -33,9 +33,9 @@
                     <label class="itemName">B1 B2 B3</label>
                 </#if>
             </div>
-            <div class="item">
+            <div class="item" id="deleteAndUpdate">
                 <button class="submit" id="modifyButton">修改</button>
-                <button class="reset">删除话题</button>
+                <button class="reset" onclick="deleteTopics('${topic.name}')">删除话题</button>
                 <div class="clear"></div>
             </div>
         </div>
@@ -62,7 +62,7 @@
             </div>
             <div class="item">
                 <button class="submit" id="submitButton">保存</button>
-                <button class="reset">删除话题</button>
+                <button class="reset" >删除话题</button>
                 <div class="clear"></div>
             </div>
         </div>
@@ -74,5 +74,6 @@
         console.log(name);
     }
 </script>
+<script src="/js/teacher/topicInfo.js"></script>
 <script src="/js/teacher/modifyTopicInfo.js"></script>
 </@frame.page>
