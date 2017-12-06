@@ -11,6 +11,7 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class GroupVO {
     private Long id;
+    private String name;
     private UserDO leader;
     private List<UserDO> members;
     private TopicVO topic;
@@ -70,8 +71,25 @@ public class GroupVO {
         this.report = report;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public GroupVO(Long id, UserDO leader, List<UserDO> members, TopicVO topic, String report) {
         this.id = id;
+        this.leader = leader;
+        this.members = members;
+        this.topic = topic;
+        this.report = report;
+    }
+
+    public GroupVO(Long id, String name, UserDO leader, List<UserDO> members, TopicVO topic, String report) {
+        this.id = id;
+        this.name = name;
         this.leader = leader;
         this.members = members;
         this.topic = topic;

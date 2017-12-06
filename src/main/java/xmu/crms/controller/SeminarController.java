@@ -34,7 +34,7 @@ public class SeminarController {
         return null;
     }
 
-    @RequestMapping(value = "/{seminarId}/my", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/{seminarId}/my", method = RequestMethod.GET)
     public Object myInfoForSeminar(@PathVariable("seminarId") int seminarId) {
         return new Object() {
             public Long id = 32L;
@@ -102,7 +102,7 @@ public class SeminarController {
         members.add(member1);
         members.add(member2);
         TopicVO topic = new TopicVO(1L, "A", "Domain Model", 5, 3);
-        GroupVO group = new GroupVO(3L, leader, members, topic, "report");
+        GroupVO group = new GroupVO(3L, "1A1",leader, members, topic, "report");
 
         return group;
 

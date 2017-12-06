@@ -9,6 +9,8 @@
     <title></title>
     <link rel="stylesheet" href="/css/frame.css">
     <link rel="stylesheet" href="/css/infoFrame.css">
+    <script src="/js/jquery-1.7.2.min.js"></script>
+    <script src="/js/jquery.easing.min.js"></script>
 </head>
 <body>
 <div class="top">
@@ -26,9 +28,9 @@
     <div class="navigation">
         <div class="title">导航</div>
         <div class="line"></div>
-        <div class="courseIntroduction"><a class="guidefont" href="#">基本信息</a>
-            <a class="guidefont" href="#">课程信息</a>
-            <a class="guidefont" href="#">选择课程</a>
+        <div class="courseIntroduction"><a class="guidefont" href="/student">基本信息</a>
+            <a class="guidefont" href="/student/course">课程信息</a>
+            <a class="guidefont" href="/student/choose">选择课程</a>
         </div>
     </div>
     <#nested >

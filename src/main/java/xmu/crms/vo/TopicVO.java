@@ -10,6 +10,8 @@ public class TopicVO {
     private String description;
     private Integer groupLimit;
     private Integer groupLeft;
+    private String serial;
+    private Integer groupMemberLimit;
 
     public TopicVO(Long id, String name, String description, Integer groupLimit, Integer groupLeft) {
         this.id = id;
@@ -17,6 +19,16 @@ public class TopicVO {
         this.description = description;
         this.groupLimit = groupLimit;
         this.groupLeft = groupLeft;
+    }
+
+    public TopicVO(Long id, String name, String description, Integer groupLimit, Integer groupLeft, String serial, Integer groupMemberLimit) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.groupLimit = groupLimit;
+        this.groupLeft = groupLeft;
+        this.serial = serial;
+        this.groupMemberLimit = groupMemberLimit;
     }
 
     public TopicVO(Long id, String name) {
@@ -73,5 +85,21 @@ public class TopicVO {
 
     public void setGroupLeft(Integer groupLeft) {
         this.groupLeft = groupLeft;
+    }
+
+    public String getSerial() {
+        return serial;
+    }
+
+    public void setSerial(String serial) {
+        this.serial = serial;
+    }
+
+    public Integer getGroupMemberLimit() {
+        return groupMemberLimit;
+    }
+
+    public void setGroupMemberLimit(Integer groupMemberLimit) {
+        this.groupMemberLimit = groupMemberLimit;
     }
 }

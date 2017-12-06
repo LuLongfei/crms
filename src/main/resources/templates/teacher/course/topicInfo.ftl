@@ -7,22 +7,22 @@
         <div class="title">查看话题</div>
         <div class="returnButton">返回上一页</div>
         <div class="line"></div>
-        <div class="itemBody">
+        <div class="itemBody" id="showInfo">
             <div class="item">
                 <label class="itemName">题 目:</label>
-                <label class="itemName">${topic.name}</label>
+                <label class="itemName" id="name">${topic.name}</label>
             </div>
             <div class="item">
                 <label class="itemName">说 明:</label>
-                <label class="itemName">${topic.description}</label>
+                <label class="itemName" id="description">${topic.description}</label>
             </div>
             <div class="item">
                 <label class="itemName">组数限制:</label>
-                <label class="itemName">${topic.groupLimit}</label>
+                <label class="itemName" id="groupLimit">${topic.groupLimit}</label>
             </div>
             <div class="item">
                 <label class="itemName">组内人数限制:</label>
-                <label class="itemName">${topic.groupLeft}</label>
+                <label class="itemName" id="memberLimit">${topic.groupLeft}</label>
             </div>
             <div class="item">
                 <label class="itemName">已选小组:</label>
@@ -34,17 +34,48 @@
                 </#if>
             </div>
             <div class="item">
-                <button class="submit">修改</button>
+                <button class="submit" id="modifyButton">修改</button>
+                <button class="reset">删除话题</button>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="itemBody" id="modifyInfo" style="display: none;">
+            <div class="item">
+                <label class="itemName">题 目:</label>
+                <input class="middleInput" id="name"></input>
+            </div>
+            <div class="item">
+                <label class="itemName">说 明:</label>
+                <input class="middleInput" id="description"></label>
+            </div>
+            <div class="item">
+                <label class="itemName">组数限制:</label>
+                <input class="middleInput" id="groupLimit"></input>
+            </div>
+            <div class="item">
+                <label class="itemName">组内人数限制:</label>
+                <input class="middleInput" id="memberLimit"></input>
+            </div>
+            <div class="item">
+                <label class="itemName">已选小组:</label>
+                <label class="itemName">A1</label>
+            </div>
+            <div class="item">
+                <button class="submit" id="submitButton">保存</button>
                 <button class="reset">删除话题</button>
                 <div class="clear"></div>
             </div>
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 <script>
     function returnButton(name,url) {
         console.log(url);
         console.log(name);
     }
 </script>
+=======
+<script src="/js/teacher/modifyTopicInfo.js"></script>
+>>>>>>> 2ac5c27b149d667deb04f5203a7ebc6f30810278
 </@frame.page>

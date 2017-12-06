@@ -72,11 +72,11 @@ public class GroupController {
     @RequestMapping(value = "/{groupId}/grade", method = RequestMethod.GET)
     public Object selectGroupGrade(@PathVariable("groupId") int groupId) {
         class PreGrade {
-            public Long id;
+            public Long topicId;
             public Integer grade;
 
-            public PreGrade(Long id, Integer grade) {
-                this.id = id;
+            public PreGrade(Long topicId, Integer grade) {
+                this.topicId = topicId;
                 this.grade = grade;
             }
         }
@@ -90,11 +90,13 @@ public class GroupController {
     }
 
     @RequestMapping(value = "/{groupId}/grade/report", method = RequestMethod.PUT)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public Object updateGroupReportGrade(@PathVariable("groupId") int groupId) {
         return null;
     }
 
     @RequestMapping(value = "/{groupId}/grade/presentation/{studentId}", method = RequestMethod.PUT)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public Object updateGroupPresentationGrade(@PathVariable("groupId") int groupId) {
         return null;
     }
