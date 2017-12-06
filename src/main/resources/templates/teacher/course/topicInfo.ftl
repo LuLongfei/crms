@@ -42,19 +42,19 @@
         <div class="itemBody" id="modifyInfo" style="display: none;">
             <div class="item">
                 <label class="itemName">题 目:</label>
-                <input class="middleInput" id="name"></input>
+                <input class="middleInput" id="name">
             </div>
             <div class="item">
                 <label class="itemName">说 明:</label>
-                <input class="middleInput" id="description"></label>
+                <input class="middleInput" id="description">
             </div>
             <div class="item">
                 <label class="itemName">组数限制:</label>
-                <input class="middleInput" id="groupLimit"></input>
+                <input class="middleInput" id="groupLimit">
             </div>
             <div class="item">
                 <label class="itemName">组内人数限制:</label>
-                <input class="middleInput" id="memberLimit"></input>
+                <input class="middleInput" id="memberLimit">
             </div>
             <div class="item">
                 <label class="itemName">已选小组:</label>
@@ -68,14 +68,11 @@
         </div>
     </div>
 </div>
-<<<<<<< HEAD
 <script>
     function returnButton(name,url) {
         console.log(url);
         console.log(name);
     }
 </script>
-=======
 <script src="/js/teacher/modifyTopicInfo.js"></script>
->>>>>>> 2ac5c27b149d667deb04f5203a7ebc6f30810278
 </@frame.page>
