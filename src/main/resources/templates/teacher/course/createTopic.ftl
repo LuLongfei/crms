@@ -24,7 +24,7 @@
                 <input class="middleInput">
             </div>
             <div class="item">
-                <button class="submit">提交</button>
+                <button class="submit" onclick="window.location.href = '/teacher/course/seminarInfo?isAddTopic'">提交</button>
                 <button class="reset">重置</button>
                 <div class="clear"></div>
             </div>

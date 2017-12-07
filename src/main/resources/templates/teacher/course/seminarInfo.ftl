@@ -82,5 +82,6 @@
 </div>
 <script src="/js/teacher/seminarInfo.js"></script>
 <script src="/js/teacher/modifySeminarInfo.js"></script>
+<script src="/js/teacher/addTopic.js"></script>
 
 </@frame.page>
