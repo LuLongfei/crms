@@ -7,7 +7,7 @@
         <div class="title">分组信息</div>
         <div class="returnButton" id="returnButton">返回上一页</div>
         <div class="line"></div>
-        <div class="itemBody">
+        <div class="itemBody"">
             <table class="table table-striped">
                 <thead class="tableTitle">
 
@@ -41,7 +41,7 @@
         <div class="title">分组信息</div>
         <div class="returnButton" id="returnButton">返回上一页</div>
         <div class="line"></div>
-        <div class="itemBody">
+        <div class="itemBody"  style="height: auto!important;">
             <table class="table table-striped">
                 <thead class="tableTitle">
 
@@ -71,7 +71,7 @@
         </div>
         <div class="title">添加成员</div>
         <div class="line"></div>
-        <div class="itemBody">
+        <div class="itemBody" style="height: auto!important;">
             <table class="table table-striped">
                 <thead class="tableTitle">
 
