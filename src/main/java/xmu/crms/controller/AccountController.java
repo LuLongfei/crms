@@ -49,4 +49,13 @@ public class AccountController {
         };
     }
 
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
+    public Object register(String type) {
+        return new Object() {
+            public String type = "student";
+            public String name = "123456";
+            public String jwt = "csdliufhs0=fads-fsafdasd-f=";
+            public Long id =2156L;
+        };
+    }
 }
