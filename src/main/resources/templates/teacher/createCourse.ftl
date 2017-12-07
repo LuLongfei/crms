@@ -2,7 +2,7 @@
 <@frame.page title="创建课程">
 <link rel="stylesheet" href="/css/content.css">
 <div class="content">
-    <<div class="contentBlock">
+    <div class="contentBlock">
     <div class="title">创建课程</div>
     <div class="returnButton" >返回上一页</div>
     <div class="line"></div>
