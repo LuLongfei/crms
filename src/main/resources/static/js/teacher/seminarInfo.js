@@ -25,6 +25,13 @@ function topicInfo(e,s){
     }
 };
 
+function deleteSeminar(e){
+    var r = confirm("确认删除"+e+"?");
+    if(r == true) {
+        location.href = "/teacher/course/homePage/OOAD?seminar=" + e;
+    }
+};
+
 
 $("#topicAdd").click(function(){
     window.location.href = "/teacher/course/createTopic";

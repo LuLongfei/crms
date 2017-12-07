@@ -23,11 +23,11 @@
         <div class="line"></div>
         <div class="blockBody">
             <#if name == "OOAD">
-                <div class="block" id = "seminar1" onclick="seminar('seminar1')">
+                <div class="block" id = "讨论课1" onclick="seminar('seminar1')">
                     <div class="blockFont" id="seminar1">讨论课1</div>
                 </div>
-                <div class="block">
-                    <div class="blockFont" id="seminar2" onclick="seminar('seminar2')">讨论课2</div>
+                <div class="block" id="讨论课2" onclick="seminar('seminar2')">
+                    <div class="blockFont" id="seminar2">讨论课2</div>
                 </div>
             </#if>
             <div class="block" id="seminarAdd">

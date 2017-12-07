@@ -31,7 +31,7 @@
                 <div class="item">
                     <button class="leftButton" id="grade">评分</button>
                     <button class="middleButton" id="modifyButton">修改</button>
-                    <button class="rightButton">删除讨论课</button>
+                    <button class="rightButton" onclick="deleteSeminar('${seminar.name}')">删除讨论课</button>
                     <div class="clear"></div>
                 </div>
             </#if>

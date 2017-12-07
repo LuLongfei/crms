@@ -7,7 +7,7 @@ function course(e){
     }
 };
 function deleteCourse(e) {
-    var r = confirm("确认退课？");
+    var r = confirm("确认删除"+e+"?");
     if( r == true){
         alert("取消成功");
         $("#"+e).remove();

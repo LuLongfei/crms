@@ -13,6 +13,7 @@ $(document).ready(function() {
     }
         console.log(GetQueryString("class"));
         $("#"+GetQueryString("class")).remove();
+        $("#"+GetQueryString("seminar")).remove();
     });
 
 function seminar(e){
