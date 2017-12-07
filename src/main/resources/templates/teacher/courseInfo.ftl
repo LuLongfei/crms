@@ -24,16 +24,20 @@
                                     </div>
                                     <div class="modal-body">
                                         <div class="item">
-                                            <label style="font-family: YouYuan;font-size: 18px;">班级数:</label>
-                                            <input placeholder="${courses.numClass}">
-                                            <label style="font-family: YouYuan;font-size: 18px;">学生人数：</label>
-                                            <input placeholder="${courses.numStudent}">
+                                            <label style="font-family: YouYuan;font-size: 15px;width:30%;">班级数:</label>
+                                            <input style="width:60%;border:1px solid black;min-height: 8px;" placeholder="${courses.numClass}">
                                         </div>
                                         <div class="item">
-                                            <label style="font-family: YouYuan;font-size: 18px;">开始时间:</label>
-                                            <input placeholder="${courses.startTime}">
-                                            <label style="font-family: YouYuan;font-size: 18px;">结束时间：</label>
-                                            <input placeholder="${courses.endTime}">
+                                            <label style="font-family: YouYuan;font-size: 15px;width:30%;">学生人数：</label>
+                                            <input style="width:60%;border:1px solid black;min-height: 8px;" placeholder="${courses.numStudent}">
+                                        </div>
+                                        <div class="item">
+                                            <label style="font-family: YouYuan;font-size: 15px;width:30%;">开始时间:</label>
+                                            <input style="width:60%;border:1px solid black;min-height: 8px;" placeholder="${courses.startTime}">
+                                        </div>
+                                        <div class="item">
+                                            <label style="font-family: YouYuan;font-size: 15px;width:30%;">结束时间：</label>
+                                            <input style="width:60%;border:1px solid black;min-height: 8px;" placeholder="${courses.endTime}">
                                         </div>
                                     </div>
                                     <div class="modal-footer">
