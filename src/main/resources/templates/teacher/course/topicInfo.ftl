@@ -5,7 +5,7 @@
 <div class="content">
     <div class="contentBlock">
         <div class="title">查看话题</div>
-        <div class="returnButton">返回上一页</div>
+        <div class="returnButton" id="returnButton">返回上一页</div>
         <div class="line"></div>
         <div class="itemBody" id="showInfo">
             <div class="item">
