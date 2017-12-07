@@ -69,6 +69,10 @@
 <script>
     $("#returnFinish").click(function(){
         window.location.href = "/teacher/course/seminarInfo";
-    })
+    });
+    $("img[alt=预览]").click(function () {
+        window.location.href = "/teacher/course/viewReport";
+    });
+
 </script>
 </@frame.page>

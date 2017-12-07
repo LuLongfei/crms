@@ -261,6 +261,11 @@ public class HelloController {
     public String teaCreate(Model model) {
         return "/teacher/createCourse";
     }
+
+    @RequestMapping("/teacher/course/viewReport")
+    public String viewReport() {
+        return "teacher/course/viewReport";
+    }
 }
 
 
