@@ -28,9 +28,9 @@
     <div class="navigation">
         <div class="title">导航</div>
         <div class="line"></div>
-        <div class="courseIntroduction"><a class="guidefont" href="#">基本信息</a>
-            <a class="guidefont" href="#">课程信息</a>
-            <a class="guidefont" href="#">新建课程</a>
+        <div class="courseIntroduction"><a class="guidefont" href="/teacher">基本信息</a>
+            <a class="guidefont" href="/teacher/course">课程信息</a>
+            <a class="guidefont" href="/teacher/createCourse">新建课程</a>
         </div>
     </div>
     <#nested >

@@ -33,7 +33,7 @@
                 </tbody>
             </table>
             <div class="item">
-                <button id="modifyButton">修改</button>
+                <button class="submit" id="modifyButton">修改</button>
             </div>
         </div>
     </div>
@@ -69,7 +69,7 @@
                 </tbody>
             </table>
         </div>
-        <div class="title">分组信息</div>
+        <div class="title">添加成员</div>
         <div class="line"></div>
         <div class="itemBody">
             <table class="table table-striped">
@@ -106,7 +106,7 @@
             </table>
         </div>
         <div class="item">
-            <button id="submitButton">保存</button>
+            <button class="submit" id="submitButton">保存</button>
         </div>
     </div>
 </div>
