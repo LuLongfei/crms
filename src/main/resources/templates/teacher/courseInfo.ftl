@@ -6,7 +6,7 @@
     <div class="contentBlock">
         <div class="title">课程信息</div>
         <div class="line"></div>
-        <div>
+        <div id="courseContainer">
             <#list data as courses>
                 <div class="main_box_right_content" id="${courses.name}">
                     <h3 class="classtitle"><span id="course" onclick="javascript:course('${courses.name}')">${courses.name}</span>
@@ -35,4 +35,5 @@
 </div>
 <div class="clear"></div>
 <script src="/js/teacher/courseInfo.js"></script>
+<script src="/js/teacher/addCourse.js"></script>
 </@frame.page>

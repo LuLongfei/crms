@@ -37,4 +37,6 @@
     </div>
 </div>
 <script src="/js/teacher/CourseHome.js"></script>
+<script src="/js/teacher/addSeminar.js"></script>
+<script src="/js/teacher/addClass.js"></script>
 </@frame.page>

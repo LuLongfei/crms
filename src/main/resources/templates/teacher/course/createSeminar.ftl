@@ -52,7 +52,7 @@
                 <input class="middleInput">
             </div>
             <div class="item">
-                <button class="submit">提交</button>
+                <button class="submit" onclick="javascript: window.location.href = '/teacher/course/homePage/OOAD?isAddSeminar=1'">提交</button>
                 <button class="reset">重置</button>
                 <div class="clear"></div>
             </div>
