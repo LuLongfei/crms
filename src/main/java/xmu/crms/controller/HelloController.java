@@ -236,6 +236,25 @@ public class HelloController {
 
     @RequestMapping("/student/choose")
     public String stuChoose(Model model) {
+        ClassShowCourseVO course = new ClassShowCourseVO((long)1,"J2EE",2);
+        ClassShowVO class1 = new ClassShowVO((long)1,"周三1-2节","邱明","海韵208",course);
+        ClassShowVO class2 = new ClassShowVO((long)2,"周三5-6节","邱明","海韵212",course);
+        List<ClassShowVO> classes = new ArrayList<>();
+        classes.add(class1);
+        classes.add(class2);
+        model.addAttribute("classes",classes);
+        return "/student/chooseCourse";
+    }
+
+    @RequestMapping("/student/choose/course")
+    public String stuChooseCourse(Model model) {
+        ClassShowCourseVO course = new ClassShowCourseVO((long)1,"OOAD",2);
+        ClassShowVO class1 = new ClassShowVO((long)1,"周三1-2节","邱明","海韵208",course);
+        ClassShowVO class2 = new ClassShowVO((long)2,"周三5-6节","邱明","海韵212",course);
+        List<ClassShowVO> classes = new ArrayList<>();
+        classes.add(class1);
+        classes.add(class2);
+        model.addAttribute("classes",classes);
         return "/student/chooseCourse";
     }
 

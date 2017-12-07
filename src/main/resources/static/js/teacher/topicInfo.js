@@ -22,4 +22,8 @@ function deleteTopics(e){
     if( r == true){
         location.href="/teacher/course/seminarInfo?delete="+e;
     }
-}
+};
+
+$("#returnButton").click(function () {
+   window.history.go(-1);
+});
