@@ -33,7 +33,7 @@ public class UserDO {
     private String avatar;
     private Gender gender;
     private SchoolDO school;
-
+    private String title;
     public UserDO(Long id, String name) {
         this.id = id;
         this.name = name;
@@ -142,5 +142,13 @@ public class UserDO {
                 ", gender=" + gender +
                 ", school=" + school +
                 '}';
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

@@ -49,6 +49,7 @@ public class SeminarController {
         };
     }
 
+    @RequestMapping(value = "/{seminarId}/detail", method = RequestMethod.GET)
     public Object seminarDetail(@PathVariable("seminarId") int seminarId) {
         return new Object() {
             public Long id = 32L;
@@ -63,8 +64,10 @@ public class SeminarController {
 
     @RequestMapping(value = "/{seminarId}/topic", method = RequestMethod.GET)
     public Object selectTopics(@PathVariable("seminarId") int seminarId) {
+        TopicVO vo = new TopicVO(257L, "领域模型与模块划分", "Domain model与模块划分", 5, 2);
+        vo.setSerial("A");
         return new TopicVO[]{
-                new TopicVO(257L, "领域模型与模块划分", "Domain model与模块划分", 5, 2)
+                vo
         };
     }
 
@@ -102,10 +105,9 @@ public class SeminarController {
         members.add(member1);
         members.add(member2);
         TopicVO topic = new TopicVO(1L, "A", "Domain Model", 5, 3);
-        GroupVO group = new GroupVO(3L, "1A1",leader, members, topic, "report");
+        GroupVO group = new GroupVO(3L, "1A1", leader, members, topic, "report");
 
         return group;
-
     }
 
 

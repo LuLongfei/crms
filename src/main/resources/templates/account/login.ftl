@@ -30,6 +30,6 @@
 <Identity>
     <input id="man" type="radio" checked="checked" name="1" />老师<input id="woman" type="radio"  name="1"/>学生
 </Identity>
-<img src="/image/qrcode.png" class="QRCode" onclick="javascript: window.location.href='/register';">
+<img src="/image/qrcode.png" class="QRCode" onclick="javascript: window.location.href='/view/register';">
 </body>
 </html>

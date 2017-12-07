@@ -12,7 +12,7 @@ public class LoginController {
         return "account/login";
     }
 
-    @RequestMapping("/register")
+    @RequestMapping("/view/register")
     public String mainView() {
         return "account/register";
     }
