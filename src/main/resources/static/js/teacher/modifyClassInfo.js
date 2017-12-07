@@ -16,3 +16,12 @@ function submitOnclick() {
 
 $("#submitButton").click(submitOnclick);
 $("#modifyButton").click(modifyOnclick);
+
+$("#addStudent").click(function () {
+    $(this).parent().before(
+        "<tr>" +
+        "<td><input class='middleInput'></td>" +
+        "<td><input class='middleInput'></td>" +
+        "</tr>"
+    );
+})

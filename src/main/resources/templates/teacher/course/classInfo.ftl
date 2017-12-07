@@ -159,6 +159,9 @@
                         <td>24320152202002</td>
                         <td>xxx</td>
                     </tr>
+                    <tr>
+                        <td id="addStudent">添加</td>
+                    </tr>
                     </tbody>
                 </table>
                 <div class="item">
